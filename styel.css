@@ -1,27 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nerko+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=SUSE:wght@100..800&family=Sevillana&display=swap');
-*{
+
+*{  /*عشان اطبق استايل معين علي كل العناصر الي في الصفحه(*)   */
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /*Scrolبتاع styel */
 }
 header{
     background-color: #d0d3d4;
     width: 100%;
-    position: fixed;
-    z-index: 999;
+    position: fixed;    /*يفضل ثابتheader ال scroll عشان لما اعمل */
+    z-index: 999;   /*header عشان مفيش حاجه تغطي علي ال */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;/*headerعشان اعمل مسافة بين العناصر الي موجوده في */
     align-items: center;
     padding: 20px 200px;
 }
 .logo{
-    text-decoration: none;
+    text-decoration: none; /*عشان يشيل الخط الي تحت الرابط*/
     color: #2205fd;
-    text-transform: uppercase;
+    text-transform: uppercase;  /* عشان اخلي كل الحروف كابيتال*/
     font-weight: 650;
-    font-size: 1.6em;
+    font-size: 1.8em;
 
 }
 .navigation a{
@@ -33,7 +34,7 @@ header{
         margin-left: 5px;
 
 }
-.navigation a:hover{
+.navigation a:hover{    /*الحاله الي بتحصل لما الموشر يجي علي العنصر */
     color: #e91037;
 }
 section{
@@ -43,20 +44,21 @@ section{
     width: 100%;
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items:center; 
     background: url(2.jpg)no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed;/*الصورة تفضل ثاتscrollعشان لما اعمل */
 
 }
 .main h2{
     color: #0a0a0a  ;
-    
+
     font-size: 1.4em;
     font-weight: 500;
     position: relative;
     top: -50px;
+    
     
 
 }
@@ -69,33 +71,25 @@ section{
     
     
 }
-.main h3 {
-    color: #e67505 ;
-    font-size: 2em;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
 .main_btn{
     color: #fff;
     background-color: #2205fd;
     text-decoration: none;
     font-size: 1.1em;
     font-weight: 800;
-    display: inline-block;
+    display: inline-block;/*paddingاديله  a tageعشان اعرف ادي ل */
     padding:0.9375em 2.1875em;
     letter-spacing: 1px;
     border-radius: 16px;
     margin-bottom: 40px;
-    transition: .5s;
+    transition: .5s;/* يحصل في قد ايهhover التحول بتاع ال */
 
 
 
 }
 .main_btn:hover{
     background-color: rgb(29, 132, 229);
-    transform: scale(1.1);
+    transform: scale(1.1);/*عشان يكبر سيكا من حجمه الطبيعي*/
 }
 .Social_icons a{
     color: #ffffff;
@@ -115,24 +109,26 @@ section{
 .content{
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: row;    /*عشان الكروت تبقا جمب بعضها*/
+    flex-wrap: wrap;    /*عشان الكروت لو حجم الشاشه صغر تنزل تحت متصغرش*/
 
 }
 .card{
     background-color: white;
     width: 21.25em;
-    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+    /* اول قيمه فوق ولاتحت و تاني قيمه يمين ولا شمال و ثالث قيمة ميكونش واضح قد ايه ورابع قيمه اللون Shadowعشان نبين الكارت نعمل */
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);/*ده الشفافية15% */
     border-radius: 10px;
     padding: 25px;
     margin: 15px;
+    transition: .5s;
 
 
     
 }
 .card:hover{
     transform: scale(1.1);
-    transition: .5s;
+    
 }
 .icon{
     color: #2205fd;
@@ -147,16 +143,12 @@ section{
     font-size: 1.2em;
     font-weight: 700;
     margin: 10px;
-
 }
 .store{
     background-color:white;
-
 }
-.store .content{
+.store.content{
     margin-top: 30px;
-
-
 }
 .store-card{
     background-color: #fff;
@@ -171,10 +163,8 @@ section{
 .store-card:hover{
     transform: scale(1.1);
 }
-.store-card:hover .store-image{
-    opacity: 1;
-}
-.store-image{
+
+.store-image image{
     width: 100%;
 
 }
@@ -225,39 +215,7 @@ section{
 
 }
 .footer-titel span{
-    color: #000;
-}
-
-body {
-    transition: background-color 0.5s, color 0.5s;
-}
-
-
-.theme-toggle {
-    position: absolute; 
-    left: 20px; 
-    cursor: pointer; 
-}
-
-.theme-toggle i {
-    font-size: 1.6em; 
-    transition: color 0.3s ease; 
-}
-
-body.light-mode .theme-toggle .fa-sun {
-    color: #f39c12; 
-}
-
-body.light-mode .theme-toggle .fa-moon {
-    color: #cccccc;
-}
-
-body.dark-mode .theme-toggle .fa-sun {
-    color: #cccccc; 
-}
-
-body.dark-mode .theme-toggle .fa-moon {
-    color: #f39c12;
+    color: #2205fd;
 }
 
 @media (max-width: 1023px) {
@@ -268,7 +226,6 @@ body.dark-mode .theme-toggle .fa-moon {
     section {
         padding: 50px 50px;
     }
-
     .main h2 {
         font-size: 1.3em;
     }
